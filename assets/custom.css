@@ -9,3 +9,6 @@ h2.banner__heading.inline-richtext.h0 {
 .product-grid {
     --grid-desktop-horizontal-spacing: 15px;
 }
+h3.card__heading.card__heading--placeholder.h5 {
+    text-align: center;
+}
