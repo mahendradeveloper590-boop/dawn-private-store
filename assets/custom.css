@@ -4,4 +4,8 @@ header.header {
 }
 h2.banner__heading.inline-richtext.h0 {
     color: black;
+    font-size: 35px;
+}
+.product-grid {
+    --grid-desktop-horizontal-spacing: 15px;
 }
