@@ -14,6 +14,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Browse our latest products",
             "heading_size": "h0"
@@ -21,6 +22,7 @@
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
@@ -36,8 +38,9 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/palm-trees-sky.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -48,37 +51,84 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "custom_one_cgA4Vf": {
+      "type": "custom-one",
+      "name": "custom one",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "left_title": "We Use New Technology",
+        "left_text": "Ultrices sagittis orci a scelerisque purus semper eget duis at.",
+        "btn_text": "Read More",
+        "btn_link": "",
+        "card1_image": "shopify://shop_images/golden-autumn-leaves.jpg",
+        "card1_title": "Making Healthy Foods",
+        "card2_image": "shopify://shop_images/thin-plant-stems-in-sun.jpg",
+        "card2_title": "Reforming In The Systems"
+      }
+    },
+    "for_new_bk7kdP": {
+      "type": "for-new",
+      "blocks": {
+        "feature_kMUcyR": {
+          "type": "feature",
+          "settings": {
+            "title": "Clean Vegetables",
+            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at.",
+            "link_label": "Explore",
+            "link_url": "",
+            "custom_card_background": ""
+          }
+        },
+        "feature_xJE6YP": {
+          "type": "feature",
+          "settings": {
+            "title": "Clean Vegetables",
+            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at.",
+            "link_label": "Explore",
+            "link_url": "",
+            "custom_card_background": ""
+          }
+        },
+        "feature_jUV8Cm": {
+          "type": "feature",
+          "settings": {
+            "title": "Clean Vegetables",
+            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at.",
+            "link_label": "Explore",
+            "link_url": "",
+            "custom_card_background": ""
+          }
+        },
+        "feature_VNd4iw": {
+          "type": "feature",
+          "settings": {
+            "title": "Clean Vegetables",
+            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at.",
+            "link_label": "Explore",
+            "link_url": "",
+            "custom_card_background": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_kMUcyR",
+        "feature_xJE6YP",
+        "feature_jUV8Cm",
+        "feature_VNd4iw"
+      ],
+      "name": "for new",
+      "settings": {
+        "heading": "What We Provide",
+        "subheading": "Our premium services",
+        "section_background": "#fbf6ed",
+        "card_background": "#0f3d2e",
+        "accent_color": "#f3b72b",
+        "columns_desktop": "4"
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "custom_one_cgA4Vf",
+    "for_new_bk7kdP"
   ]
 }

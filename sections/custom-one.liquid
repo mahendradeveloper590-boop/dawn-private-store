@@ -1,0 +1,204 @@
+{% schema %}
+{
+  "name": "Feature Cards Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_icon",
+      "label": "Left Side Icon"
+    },
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Left Title",
+      "default": "We Use New Technology"
+    },
+    {
+      "type": "textarea",
+      "id": "left_text",
+      "label": "Left Description",
+      "default": "Ultrices sagittis orci a scelerisque purus semper eget duis at."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Read More"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "card1_image",
+      "label": "Card 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "card1_title",
+      "label": "Card 1 Title",
+      "default": "Making Healthy Foods"
+    },
+
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "card2_image",
+      "label": "Card 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "card2_title",
+      "label": "Card 2 Title",
+      "default": "Reforming In The Systems"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "custom one"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="feature-wrapper">
+  <div class="feature-grid">
+
+    <!-- LEFT CARD -->
+    <div class="feature-left">
+      {% if section.settings.left_icon %}
+        <img src="{{ section.settings.left_icon | img_url: '200x' }}" class="feature-icon" alt="">
+      {% endif %}
+
+      <h2 class="feature-title">{{ section.settings.left_title }}</h2>
+      <div class="underline"></div>
+
+      <p class="feature-text">{{ section.settings.left_text }}</p>
+
+      {% if section.settings.btn_text %}
+        <a href="{{ section.settings.btn_link }}" class="feature-btn">{{ section.settings.btn_text }}</a>
+      {% endif %}
+    </div>
+
+    <!-- CARD 1 -->
+    <div class="feature-card">
+      <img src="{{ section.settings.card1_image | img_url: '800x' }}" class="card-img" alt="">
+      <div class="card-box">
+        <h3>{{ section.settings.card1_title }}</h3>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="feature-card">
+      <img src="{{ section.settings.card2_image | img_url: '800x' }}" class="card-img" alt="">
+      <div class="card-box">
+        <h3>{{ section.settings.card2_title }}</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.feature-wrapper {
+  padding: 60px 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.feature-left {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+  width: 70px;
+  margin: 0 auto 20px auto;
+}
+
+.feature-title {
+  font-size: 28px;
+  color: #1d6f3a;
+  font-weight: 700;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #f4bf3c;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.feature-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #134b27;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media(max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-img {
+    height: 280px;
+  }
+}
+</style>
