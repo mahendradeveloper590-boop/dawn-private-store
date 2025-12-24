@@ -36,7 +36,6 @@
       {%- for block in section.blocks -%}
         {%- liquid
           assign card_color = block.settings.custom_card_background | default: card_bg
-          assign has_link = block.settings.link_label != blank and block.settings.link_url != blank
         -%}
         <article
           class="feature-icons__card"
@@ -50,14 +49,18 @@
               <span class="feature-icons__icon-placeholder"></span>
             {%- endif -%}
           </div>
+
           {%- if block.settings.title != blank -%}
             <h3 class="feature-icons__title h3">{{ block.settings.title }}</h3>
           {%- endif -%}
+
           <span class="feature-icons__divider"></span>
+
           {%- if block.settings.text != blank -%}
             <p class="feature-icons__text">{{ block.settings.text }}</p>
           {%- endif -%}
-          {%- if has_link -%}
+
+          {%- if block.settings.link_label != blank and block.settings.link_url != blank -%}
             <a class="feature-icons__arrow" href="{{ block.settings.link_url }}">
               {{ block.settings.link_label }}
             </a>
@@ -166,44 +169,12 @@
     {
       "name": "Icon feature grid",
       "blocks": [
-        {
-          "type": "feature",
-          "settings": {
-            "title": "Clean Vegetables",
-            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at. Sollicitudin nibh sit amet commodo nulla.",
-            "link_label": "Explore"
-          }
-        },
-        {
-          "type": "feature",
-          "settings": {
-            "title": "Pure Cow's Milk",
-            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at. Sollicitudin nibh sit amet commodo nulla.",
-            "link_label": "Explore"
-          }
-        },
-        {
-          "type": "feature",
-          "settings": {
-            "title": "Clean Chicken And Eggs",
-            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at. Sollicitudin nibh sit amet commodo nulla.",
-            "link_label": "Explore"
-          }
-        },
-        {
-          "type": "feature",
-          "settings": {
-            "title": "Fertilizer Product",
-            "text": "Ultrices sagittis orci a scelerisque purus semper eget duis at. Sollicitudin nibh sit amet commodo nulla.",
-            "link_label": "Explore"
-          }
-        }
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
       ]
     }
-  ],
-  "enabled_on": {
-    "templates": ["*"]
-  }
+  ]
 }
 {% endschema %}
-
